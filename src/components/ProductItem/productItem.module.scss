@@ -1,0 +1,72 @@
+@import '@/styles/variables';
+
+.productItem {
+    list-style: none;
+    border-bottom: thin solid $background1-color;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: calc(180px + 33px);
+    padding: 16px;
+}
+
+.productItemContainer {
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    width: 100%;
+    color: $text-color;
+    cursor: pointer;
+    .productItemImgContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: $border-radius;
+        padding-right: 16px;
+        .productItemImg {
+            border-radius: $border-radius;
+        }
+    }
+    .productItemInfo {
+        display: flex;
+        flex-direction: column;
+        margin-block: 30px;
+        row-gap: 32px;
+        width: 60%;
+        .productItemTitle {
+            font-size: 18px;
+            font-weight: "regular";
+            max-width: 30rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 18px;
+            h2 {
+                font-weight: 300;
+                font-size: 18px
+            }
+            // color: $text-color;
+        }
+        .productItemPrice {
+            font-size: 24px;
+            font-weight: "regular";
+            // color: $text-color;
+        }
+    }
+    .productItemLocation {
+        margin-block: 30px;
+        .productItemLocationText {
+            font-size: 12px;
+            font-weight: "regular";
+            color: $text-color-light;
+            line-height: 30px;
+        }
+    }
+    .productItemPriceShipping {
+        margin-left: 10px;
+    }
+}
+

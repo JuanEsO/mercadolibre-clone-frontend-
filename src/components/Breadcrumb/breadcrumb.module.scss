@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+    .breadcrumb__item {
+        display: flex;
+        font-size: 14px;
+        font-weight: lighter;
+        color: $text-color-light;
+        cursor: pointer;
+    }
+    .breadcrumb__item + .breadcrumb__item {
+        padding-left: 0.5rem;
+    }
+
+    .breadcrumb__item + .breadcrumb__item::before {
+        display: inline-block;
+        padding-right: 0.5rem;
+        color: #6c757d;
+        content: "/";
+    }
+
+    .breadcrumb__item:hover {
+        color: #33383c;
+    }
+
+
+}
